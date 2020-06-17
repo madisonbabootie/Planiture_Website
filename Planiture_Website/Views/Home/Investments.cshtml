@@ -6,28 +6,54 @@
 
 <asp:Content id="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <section class="invest-background">
-        <div class="container">
-            <div class="mx800p">
-                <h2 class="text-center">@ViewData["Title"]</h2>
-                <p>
-                    PLANITURE currently offers clients the opportunity to
-                    invest their money and have it earn for them.
-                </p>
-                <br />
-                <h3>Investment Account</h3>
-                <p>
-                    Open an Investment Account with a minimum of $100.00.
-                    Whenever a client opens an Investment Account, a Profits
-                    Account is assigned to client for profit holds.
-                </p>
-                <br />
-                <h3>Stock Portfolio</h3>
-                <p>
-                    Open a Stock Portfolio with a minimum of one stock purchase
-                    from our recommended stock list.
-                </p>
-            </div>
-        </div>
+        <!--added image-->
+        <div class="invest-menu" id="invest">
+            <h1>@ViewData["Title"]</h1>
+            <p>
+                PLANITURE currently offers clients the opportunity to invest their money and have it earn for them.
+            </p>
+            <br />
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-sm-4 col-md-4">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>CASHFLIP</h3>
+                            <div class="row">
 
+                            </div>
+                            <p>
+                                Open an Investment Account with a minimum of $100.00. Whenever a client opens
+                                <br />an Investment Account, a Profits Account is assigned to client for profit holds.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>PRIVATE INVESTORS</h3>
+                            <p>
+                                Open an Investment Account with a minimum of $100.00. Whenever a client opens an
+                                <br />Investment Account, a Profits Account is assigned to client for profit holds.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>STOCK PORTFOLIO</h3>
+                            <p>
+                                Open an Investment Account with a minimum of $100.00. Whenever a client opens an
+                                <br />Investment Account, a Profits Account is assigned to client for profit holds.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 </asp:Content>

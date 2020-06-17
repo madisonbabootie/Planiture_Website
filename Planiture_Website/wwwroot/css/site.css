@@ -1,5 +1,7 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
+
+/*KINGZWILL ADDED THE FOLLOWING*/
 
 /* html
 -------------------------------------------------- */
@@ -58,19 +60,147 @@ a {
     border-color: #1861ac;
 }
 
-/* Body
+/* LOGIN page
 -------------------------------------------------- */
 
-body { 
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;                              /*something here affects the footer*/
+
+
+
+
+
+
+
+/* Body
+-------------------------------------------------- */
+/*JUST ADDED BY KINGZWILL*/
+body {
+    margin-bottom: 60px; /*something here affects the footer*/
     background-color: #808080;
-    min-height: 1000px; /*JUST ADDED BY KINGZWILL*/
+    min-height: 1000px;
+}
+
+/* Body - Feedback Button & Form
+-------------------------------------------------- */
+
+.feedback-btn {
+    -webkit-appearance: none;
+    background: darkgoldenrod;
+    border: 2px solid black;
+    border-radius: 4px;
+    outline: none;
+    padding: 0.5em 0.8em;
+    margin-right: 15px;
+    color: black;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    align-content: center;
+}
+
+.feedback-btn:hover{
+    background: gold;
+}
+
+.feedback-btn:active{
+    background: goldenrod;
+    color: black;
+}
+
+.feedback-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.feedbackmodal-content{
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.feedbackmodal-content form{
+    width: 100%;
+}
+
+.feedbackmodal-content .row100{
+    display: flex;
+    width: 100%;
+}
+
+.feedbackmodal-content .row100 .inputBx50{
+    width: 50%;
+    margin-left: 0 20px;
+}
+
+.feedbackmodal-content .row100 .inputBx100{
+    width: 100%;
+    margin: 0 20px;
+}
+
+.feedbackmodal-content .row100 input,
+.feedbackmodal-content .row100 textarea{
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: black;
+    background: transparent;
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 20px 0;
+    resize: none;
+}
+
+.feedbackmodal-content .row100 textarea{
+    height: 100px;
+}
+
+.feedbackmodal-content .row100 input::placeholder,
+.feedbackmodal-content .row100 textarea::placeholder{
+    color: black;
+}
+
+.feedbackmodal-content .row100 input[type="submit"] {
+    -webkit-appearance: none;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    align-content: center;
+}
+
+.modal-header h2 {
+    font: bold 30px Sans-Serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: #369;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 0 10px 0;
+    line-height: 24px;
+}
+
+.modal-header {
+    display: block;
+    position: relative;
+    margin: 40px 0;
 }
 
 /* Body Footer
 -------------------------------------------------- */
-
 .footer {
     position: absolute;
     bottom: 0;
@@ -102,7 +232,7 @@ header { /*KINGZWILL ADDED THE FOLLOWING*/
     color: darkgoldenrod;
 }
 
-.navbar .sticky .logo { /*ADDED BY KINGZWILL*/
+/*.navbar .sticky .logo {
     color: #000000;
 }
 
@@ -116,7 +246,7 @@ header { /*KINGZWILL ADDED THE FOLLOWING*/
     letter-spacing: 2px;
     transition: 0.6s;
 }
-
+*/
 
 header ul { /*ADDED BY KINGZWILL*/
     position: relative;
@@ -128,6 +258,10 @@ header ul { /*ADDED BY KINGZWILL*/
 header ul li { /*ADDED BY KINGZWILL*/
     position: relative;
     list-style: none;
+}
+
+.dropdown-menu li {
+    text-align: left;
 }
 
 header ul li a { /*KINGZWILL ADDED THE FOLLOWING*/
@@ -142,12 +276,12 @@ header ul li a { /*KINGZWILL ADDED THE FOLLOWING*/
 
 /* Banner
 -------------------------------------------------- */
+
 .banner { /*KINGZWILL ADDED THE FOLLOWING*/
     position: relative;
     width: 100%;
     min-height: 100vh;
     background-image: url(sky.jpg);
-    /*background-color: darkgrey;*/
     background-size: cover;
     display: flex; /*changed from inline*/
     justify-content: center;
@@ -162,11 +296,9 @@ header ul li a { /*KINGZWILL ADDED THE FOLLOWING*/
 
 .banner h2 span {/*ADDED BY KINGZWILL*/
     color: gold;
-    /*font-size:60px;*/
 }
 
 .banner h2 b {/*ADDED BY KINGZWILL*/
-    /*font-size: 60px;*/
     color: black;
 
 }
@@ -222,21 +354,55 @@ a.navbar-brand { /*KINGZWILL ADDED THE FOLLOWING*/
     top: 0;
 }
 
+.navbar .dropdown-menu{
+    padding: 5px;
+    position: relative;
+}
+
+.navbar .dropdown-menu li{
+    text-align: left;
+}
+
+.navbar .dropdown-menu li:hover{
+    background-color: grey;
+    transition: 0.4s;
+}
+
+.navbar .dropdown-menu a{
+    color: black;
+    text-decoration: none;
+}
+
+.navbar .dropdown .dropdown-menu a.dropbtn{
+    -webkit-appearance: none;
+    background: darkgoldenrod;
+    border: 2px solid black;
+    border-radius: 4px;
+    outline: none;
+    padding: 0.5em 0.8em;
+    margin-right: 15px;
+    color: black;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    align-content: center;
+}
+
+.navbar .dropdown .dropdown-menu a.dropbtn:hover {
+    background: gold;
+}
+
+.navbar .dropdown .dropdown-menu a.dropbtn:active {
+    background: goldenrod;
+    color: black;
+}
+
 .navbar li:hover { /*ADDED BY KINGZWILL*/
     background: none;
     border-color: black;
-    border-style: solid
+    border-style: solid;
 }
-
-.nav-link div div a {
-    color: purple;
-}
-
-
-
-
-
-
 
 /* Button
 -------------------------------------------------- */
@@ -260,6 +426,10 @@ ul.navbar-nav li div.dropdown:hover > div.dropdown-menu { /*ADDED BY KINGZWILL*/
     display: inline-grid; /*only grid and inline-grid works the way i want so far*/
 }
 
+
+
+
+
 .navbar button:hover { /*ADDED BY KINGZWILL*/
     background-color: darkgoldenrod;
     position: relative;
@@ -271,7 +441,6 @@ ul.navbar-nav li div.dropdown:hover > div.dropdown-menu { /*ADDED BY KINGZWILL*/
 ul.navbar-nav li div.dropdown:hover > ul.dropdown-menu {
     display: inline-grid;
 }
-
 
 /* MENU Page
 -------------------------------------------------- */
@@ -287,6 +456,7 @@ ul.navbar-nav li div.dropdown:hover > ul.dropdown-menu {
     justify-content: center;
     align-items: center;
 }
+
 
 .menu-body {
     background: #ffe8d7;
@@ -321,8 +491,25 @@ ul.navbar-nav li div.dropdown:hover > ul.dropdown-menu {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
-.menu-item a{
+
+.menu-item .text{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;        
+    text-align: center;
+    top: 40%;
+    background: rgba(0, 0, 0, 0.8);
+    font-family: Arial,sans-serif;
+    color: #fff;
+    width: 80%;
+}
+
+
+.menu-item a {
     text-underline-position: below;
     background: none;
     color: darkgoldenrod;
@@ -338,11 +525,10 @@ ul.navbar-nav li div.dropdown:hover > ul.dropdown-menu {
 -------------------------------------------------- */
 
 .invest-background {
-    /*position: relative;*/
-    /*width: 100%;*/
-    padding: 100px;
+    position: relative;
+    width: 100%;
     min-height: 100vh;
-    /*background-image: url(investmentimage.jpg);*/
+    background-image: url();
     background-color: whitesmoke;
     background-size: cover;
     display: flex; /*changed from inline*/
@@ -350,35 +536,43 @@ ul.navbar-nav li div.dropdown:hover > ul.dropdown-menu {
     align-items: center;
 }
 
-.invest-background .container {
+.invest-menu {
     position: relative;
     text-align: center;
     width: 100%;
-}
-
-.mx800p{
     max-width: 800px;
     margin: 0 auto;
 }
 
-.mx800p h2 {
-    color: black;
-    text-align: center;
-    line-height: 1em;
+.invest-menu h1 {
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    color: darkgoldenrod;
     text-transform: uppercase;
+    text-align: center;
 }
 
-.mx800p h3{
+.invest-menu h5 {
     text-align: center;
-    line-height: 1em;
-    text-transform: uppercase;
-    color: black;
 }
 
-.mx800p p{
-    color: black;
-    
+.invest-menu p {
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
 }
+
+.invest-menu .row .col-sm-4 .thumbnail{
+    border: 5px solid;
+    border-radius: 4px;
+    padding: 5px;
+    border-color: darkgoldenrod;
+}
+
+
 
 /* SUBSCRIPTIONS Page
 -------------------------------------------------- */
@@ -417,6 +611,13 @@ ul.navbar-nav li div.dropdown:hover > ul.dropdown-menu {
     font-size: 40px;
     font-weight: 200;
     margin-bottom: 10px;
+    color: darkgoldenrod;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subscribe-menu .container .header{
+    text-align: left;
 }
 
 .subscribe-menu p{
@@ -460,7 +661,6 @@ ul.navbar-nav li div.dropdown:hover > ul.dropdown-menu {
 
 .academy-menu {
     position: relative;
-    /*width: 100%;*/
     padding: 100px;
     min-height: 100vh;
     background-image: url(subscriptionimage.jpg);
@@ -503,10 +703,10 @@ ul.navbar-nav li div.dropdown:hover > ul.dropdown-menu {
     border-color: darkgoldenrod;
 }
 
-/* SECURITY Page
+/* UPLOAD/SIGN DOCUMENTS Page
 -------------------------------------------------- */
 
-.security-background {
+.upload-background{
     /*position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(800px,5fr));
@@ -514,54 +714,510 @@ ul.navbar-nav li div.dropdown:hover > ul.dropdown-menu {
     max-width: 150%;
     margin-top: 40px;
     background-image: url(securityimage.jpg);*/
-
-
-     position: relative;
+    position: relative;
     width: 100%;
     min-height: 100vh;
-    background-image: url(securityimage.jpg);
+    background-image: url();
     /*background-color: darkgrey;*/
     background-size: cover;
     display: flex; /*changed from inline*/
     justify-content: center;
     align-items: center;
 }
+
+.upload-menu {
+    position: relative;
+    padding: 100px;
+    min-height: 100vh;
+    background-image: url();
+    background-color: whitesmoke;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.upload-menu h1 {
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    color: darkgoldenrod;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.upload-file{
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+
+}
+
+.file-input{
+    display: none;
+}
+
+.upload-btn {
+    -webkit-appearance: none;
+    background: darkgoldenrod;
+    border: 2px solid black;
+    border-radius: 4px;
+    outline: none;
+    padding: 0.5em 0.8em;
+    margin-right: 15px;
+    color: black;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    align-content: center;
+}
+
+.upload-btn:hover{
+    background: gold;
+}
+
+.upload-btn:active{
+    background: goldenrod;
+    color: black;
+}
+
+.upload-label{
+    max-width: 250px;
+    font-size: 0.95em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+/* UPLOAD/SIGN DOCUMENTS Page - Display Forms Buttons
+-------------------------------------------------- */
+
+.deposit-btn {
+    -webkit-appearance: none;
+    background: darkgoldenrod;
+    border: 2px solid black;
+    border-radius: 4px;
+    outline: none;
+    padding: 0.5em 0.8em;
+    margin-right: 15px;
+    color: black;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    align-content: center;
+}
+
+.deposit-btn:hover {
+    background: gold;
+}
+
+.deposit-btn:active{
+    background: goldenrod;
+    color: black;
+}
+
+.withdrawal-btn {
+    -webkit-appearance: none;
+    background: darkgoldenrod;
+    border: 2px solid black;
+    border-radius: 4px;
+    outline: none;
+    padding: 0.5em 0.8em;
+    margin-right: 15px;
+    color: black;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    align-content: center;
+}
+
+.withdrawal-btn:hover {
+    background: gold;
+}
+
+.withdrawal-btn:active {
+    background: goldenrod;
+    color: black;
+}
+
+.payment-btn {
+    -webkit-appearance: none;
+    background: darkgoldenrod;
+    border: 2px solid black;
+    border-radius: 4px;
+    outline: none;
+    padding: 0.5em 0.8em;
+    margin-right: 15px;
+    color: black;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    align-content: center;
+}
+
+.payment-btn:hover {
+    background: gold;
+}
+
+.payment-btn:active {
+    background: goldenrod;
+    color: black;
+}
+
+
+/* UPLOAD/SIGN DOCUMENTS Page - ALL FORMS
+-------------------------------------------------- */
+.upload-menu .modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.upload-menu .modal-content {
+    width: 800px;
+    height: 700px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+    position: relative
+}
+
+/*trying something*/
+.csstransforms .col-md-3 {
+    border-left: 34px solid #369;
+    padding-left: 10px;
+}
+
+.csstransforms .col-md-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Border is the new background */
+    background: none;
+    /* Rotate from top left corner (not default) */
+    transform-origin: 0 0;
+    transform: rotate(180deg);
+}
+
+.col-md-3 h2 {
+    font: bold 30px Sans-Serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: #369;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 0 10px 0;
+    line-height: 24px;
+    transform: rotate(90deg);
+
+}
+
+.col-md-3 {
+    display: block;
+    position: relative;
+    margin: 40px 0;
+}
+
+
+
+.kingz {
+    border-radius: 5px;
+    background-color: darkgoldenrod;
+    padding: 20px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+
+
+
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer; 
+}
+
+/* CAREER Page
+-------------------------------------------------- */
+.career-background {
+    /*position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(800px,5fr));
+    grid-gap: 30px;
+    max-width: 150%;
+    margin-top: 40px;
+    background-image: url(securityimage.jpg);*/
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url();
+    /*background-color: darkgrey;*/
+    background-size: cover;
+    display: flex; /*changed from inline*/
+    justify-content: center;
+    align-items: center;
+}
+
+.career-menu {
+    position: relative;
+    padding: 100px;
+    min-height: 100vh;
+    background-image: url();
+    background-color: whitesmoke;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.career-menu .container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}*/
+
+.career-menu h1{
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    color: darkgoldenrod;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.career-menu h5{
+    text-align: center;
+}
+
+.career-menu p {
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.career-menu .row .col-sm-4 .thumbnail {
+    border: 2px solid ;
+    border-radius: 4px;
+    padding: 4px;
+    border-color: black;
+}
+
+.career-menu a{
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    border-color: black;
+    background-color: darkgoldenrod;
+    color: black;
+    font-weight: 500;
+    transition: 0.6s;
+}
+
+.career-menu a:hover{
+    border-color: black;
+    background-color: gold;
+    color: black;
+    transition: 0.6s;
+}
+
+/* CAREER - Customer Service Job Page
+-------------------------------------------------- */
+
+.customerjob-background {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url();
+    background-size: cover;
+    display: flex; /*changed from inline*/
+    justify-content: center;
+    align-items: center;
+}
+
+.customerjob-menu {
+    position: relative;
+    padding: 100px;
+    min-height: 100vh;
+    background-image: url();
+    background-color: whitesmoke;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customerjob-menu h1 {
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    color: darkgoldenrod;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* CAREER - Market Analyzer Job Page
+-------------------------------------------------- */
+
+.marketjob-background {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url();
+    background-size: cover;
+    display: flex; /*changed from inline*/
+    justify-content: center;
+    align-items: center;
+}
+
+.marketjob-menu {
+    position: relative;
+    padding: 100px;
+    min-height: 100vh;
+    background-image: url();
+    background-color: whitesmoke;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marketjob-menu h1 {
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    color: darkgoldenrod;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* CAREER - Social Media Manager Job Page
+-------------------------------------------------- */
+
+.mediajob-background {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url();
+    background-size: cover;
+    display: flex; /*changed from inline*/
+    justify-content: center;
+    align-items: center;
+}
+
+.mediajob-menu {
+    position: relative;
+    padding: 100px;
+    min-height: 100vh;
+    background-image: url();
+    background-color: whitesmoke;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mediajob-menu h1 {
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    color: darkgoldenrod;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* POLICY Page
+-------------------------------------------------- */
+
+.policy-background {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(securityimage.jpg);
+    background-size: cover;
+    display: flex; /*changed from inline*/
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* CUSTOMER SERVICE Page
 -------------------------------------------------- */
 
 .customer-background {
-    /*position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(800px,5fr));
-    grid-gap: 30px;
-    max-width: 150%;
-    margin-top: 40px;
-    background-image: url(securityimage.jpg);*/
-
-
-     position: relative;
+    position: relative;
     width: 100%;
     min-height: 100vh;
-    background-image: url(customerimage.jpg);
-    /*background-color: darkgrey;*/
+    background-image: url();
+    background-color: whitesmoke;
     background-size: cover;
     display: flex; /*changed from inline*/
     justify-content: center;
     align-items: center;
 }
-
-/*.customer-menu {
-    position: relative;
-    padding: 100px;
-    min-height: 100vh;
-    background-image: url(subscriptionimage.jpg);
-    background-color: whitesmoke;
-    background-size: cover;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-}*/
 
 .customer-menu .container {
     position: relative;
@@ -569,6 +1225,10 @@ ul.navbar-nav li div.dropdown:hover > ul.dropdown-menu {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.customer-menu .container .header{
+    text-align: left;
 }
 
 .customer-menu h1{
@@ -579,10 +1239,196 @@ ul.navbar-nav li div.dropdown:hover > ul.dropdown-menu {
     text-transform: uppercase;
 }
 
+.customer-menu .contain {
+    border: 2px solid black;
+    padding: 4rem;
+}
+.customer-menu .container h5{
+    text-align: center;
+}
+
 .customer-menu p {
+    text-align: center;
+}
+
+/* INFORMATION CENTER Page
+-------------------------------------------------- */
+
+.info-background {
+    position: relative;
+    padding: 100px;
+    min-height: 100vh;
+    background-image: url();
+    background-color: whitesmoke;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.info-menu h1 {
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    color: darkgoldenrod;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.info-menu h4{
+    text-align: center;
+}
+
+.accordion {
+    background-color: goldenrod;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-radius: .4rem;
+    box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
+
+}
+
+.active, .accordion:hover{
+    background-color: darkgoldenrod;
+}
+
+.accordion:after{
+    content: '\002B';
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after{
+    content: "\2212";
+}
+
+.info-menu p{
+    position: relative;
+}
+
+.info-menu p::before {
+    content: "";
+    position: absolute;
+    width: .6rem;
+    height: 90%;
+    background-color: #8fc460;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: black;
+    color: white;
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 650ms;
+}
+.panel p{
+    padding: 1rem;
+
+}
+
+.col-sm-4 .panel:target{
+    max-height: 20rem;
+}
+
+/* SHOP Page
+-------------------------------------------------- */
+
+.shop-background {
+    position: relative;
+    padding: 100px;
+    min-height: 100vh;
+    background-image: url();
+    background-color: whitesmoke;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.shop-menu {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.category{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.category .type{
+    position: relative;
+    background: darkgoldenrod;
+    min-height: 300px;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category .type:hover{
+    background: #000;
+}
+
+.category .type a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.category .type:hover a{
+    color: white;
+}
+
+.shop-menu .row .col-sm-4 .thumbnail {
+    border: 5px solid;
+    border-radius: 4px;
+    padding: 5px;
+    border-color: darkgoldenrod;
+}
+
+.shop-menu .row .col-sm-4 .thumbnail a{
+    font-weight: 500;
+    color: blue;
+}
+
+.shop-menu .row .col-sm-4 .thumbnail b p{
+    font-weight: bold;
+}
+
+.shop-menu .row .col-sm-4 .thumbnail a:hover{
+    background: none;
+    color: darkgoldenrod;
+    text-decoration-line: underline
+}
+
+.shop-menu p {
     position: relative;
     font-size: 18px;
     font-weight: 300;
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
+
+/* SHOP Page - CASHFLIP
+-------------------------------------------------- */
+

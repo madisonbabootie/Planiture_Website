@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
+<body class="layout">
     <header id="header" class="sticky">
         <!--added sticky class to header... KINGZWILL-->
         <nav class="navbar navbar-expand-sm  navbar-fixed-top navbar-toggleable-sm navbar-light mb-3">
@@ -23,21 +23,18 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Welcome</a>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
-                                <a class="nav-link text-dark dropdown-toggle" asp-area="" asp-controller="Home" asp-action="Menu">Menu</a>
+                                <a class="nav-link text-dark dropdown-toggle choose" asp-area="" asp-controller="Home" asp-action="Menu">Menu</a>
                                 <ul class="dropdown-menu">
-                                    
                                     <li><a asp-area="" asp-controller="Home" asp-action="Investments">Investments</a></li>
                                     <li><a asp-area="" asp-controller="Home" asp-action="Subscriptions">Subscriptions</a></li>
-                                    <li><a asp-area="" asp-controller="Home" asp-action="PlanitureAcademy">Planiture Academy</a></li>
-                                    <li><a asp-area="" asp-controller="Home" asp-action="">Upload/Sign Documents</a></li>
-                                    <li><a asp-area="" asp-controller="Home" asp-action="">Information Center</a></li>
-                                    <li><a asp-area="" asp-controller="Home" asp-action="">Career</a></li>
-                                    <li><a asp-area="" asp-controller="Home" asp-action="">Calculator</a></li>
-                                    <li><a asp-area="" asp-controller="Home" asp-action="Security">Security</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="UploadApprovedDocument">Upload/Approved Documents</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="InformationCenter">Information Center</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Career">Career</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Policy">Policy</a></li>
                                     <li><a asp-area="" asp-controller="Home" asp-action="CustomerService">Customer Service</a></li>
                                 </ul>
                             </div>
@@ -53,11 +50,44 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <!--<footer class="border-top footer text-muted">
         <div class="container">
             Copyright &copy; 2020 - Planiture. All rights reserved - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
+    </footer>-->
+    <div class="" role="button" tabindex="0" style="height:130px; position:fixed; z-index:999;
+        right:0; top:80%; margin-top:-65px; width:40px;">
+        <button class="feedback-btn modal-open" id="feedbackBtn" type="button" data-modal="modal-feedback" style="-webkit-transform: rotate(-90deg);height:50px; position:fixed;z-index:999;right: -50px;">FeedBack</button>
+    </div>
+    <div class="modal feedback-modal" id="modal-feedback">
+        <div class="feedbackmodal-content kingz">
+            <div class="close modal-close">+</div>
+            <form>
+                <div class="modal-header">
+                    <h2>FeedBack</h2>
+                </div>
+                <div class="row100">
+                    <div class="inputBx50">
+                        <input type="text" placeholder="Full Name" />
+                    </div>
+                    <div class="inputBx50">
+                        <input type="text" placeholder="Investment No." />
+                    </div>
+                </div>
+                <div class="row100">
+                    <div class="inputBx100">
+                        <p>Please type or copy and paste your feedback below <b>(word limit: 150 words)</b></p>
+                        <textarea placeholder="Message"></textarea>
+                    </div>
+                </div>
+                <div class="row100">
+                    <div class="inputBx100">
+                        <input type="submit" value="Send" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

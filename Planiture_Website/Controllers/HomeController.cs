@@ -48,12 +48,47 @@ namespace Planiture_Website.Controllers
             return View();
         }
 
-        public IActionResult Security()
+        public IActionResult Policy()
         {
             return View();
         }
 
         public IActionResult CustomerService()
+        {
+            return View();
+        }
+
+        public IActionResult Career()
+        {
+            return View();
+        }
+
+        public IActionResult CustomerServiceJob()
+        {
+            return View();
+        }
+
+        public IActionResult MarketAnalyzerJob()
+        {
+            return View();
+        }
+
+        public IActionResult SocialMediaManagerJob()
+        {
+            return View();
+        }
+
+        public IActionResult UploadApprovedDocument()
+        {
+            return View();
+        }
+
+        public IActionResult Shop()
+        {
+            return View();
+        }
+
+        public IActionResult InformationCenter()
         {
             return View();
         }
